@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
+  <title>{{post.title}}</title>
+  <base href="/Learn-Assignment/">
+  {{ site_head() }}
+</head>
+<body class="{% block body_class %}{% endblock %}">
+    {% block main %}{% endblock %}
+  {{ site_footer() }}
+</body>
+</html>
