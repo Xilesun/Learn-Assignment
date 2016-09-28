@@ -1,0 +1,65 @@
+{% extends 'layouts/base.html' %}
+
+{% block body_class %}float{% endblock %}
+
+{% block main %}
+<header><h1>{{ post.head }}</h1></header>
+<!-- Responsive Blocks -->
+<section>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+<div>4</div>
+<div>5</div>
+<div>6</div>
+</section>
+<!-- Offset -->
+<section>
+<div>1</div>
+<div>2</div>
+</section>
+<!-- Nesting -->
+<section>
+<div>a</div>
+<div>a</div>
+<div>
+<div>b</div>
+<div>b</div>
+</div>
+</section>
+<!-- Alignment -->
+<section>
+<div>1</div>
+</section>
+<!-- Cycle -->
+<section>
+<div>{{ post.text1 }}</div>
+<div>{{ post.text2 }}</div>
+<div>{{ post.text3 }}</div>
+<div>{{ post.text4 }}</div>
+<div>{{ post.text5 }}</div>
+<div>{{ post.text6 }}</div>
+</section>
+<!-- Vertical Grid -->
+<section>
+<div>1</div>
+<div>2</div>
+<div>3</div>
+</section>
+<!-- Waffle Grid -->
+<section>
+{% for i in range(1, 16) -%}
+<div>{{ i }}</div>
+{%- endfor %}
+</section>
+<!-- Varying Sizes -->
+<section>
+<div>1</div>
+<div>2</div>
+</section>
+<!-- Source Ordering -->
+<section>
+<div>1</div>
+<div>2</div>
+</section>
+{% endblock %}

@@ -1,4 +1,5 @@
 export function display(){
+	if($("body").attr('class') == "table"){
 	var width = window.innerWidth;
 
 	reDisplay()
@@ -32,6 +33,7 @@ export function display(){
 		$("section:eq(0)>div").wrap("<div></div>");
 		$("section:eq(4)>div").wrap("<div></div>");
 	}
+}
 }
 
 function reDisplay(){
