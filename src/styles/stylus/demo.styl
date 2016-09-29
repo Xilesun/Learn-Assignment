@@ -1,5 +1,48 @@
+/* variables and functions */
+isAboveDesktop = '(min-width: 1100px)'
+isDesktop = '(min-width: 800px) and (max-width: 1100px)'
+isTablet = '(min-width: 500px) and (max-width: 800px)'
+isMobile = '(max-width: 500px)'
+setWidth(col, gutter = unit(30, px))
+  width "calc(99.99% * %s - (%s - %s * %s))" % (col gutter gutter col)
+setMargin(side, m=0)
+  if side != false
+    margin-{side}: m
+  else
+    margin: m
+setEnds(float, fn, arg1, arg2)
+  if fn != false
+    &:first-child
+      fn(arg1)
+    &:last-child
+      fn(arg2)
+  if float == true
+    &:first-child
+      float: left
+    &:last-child
+      float: right
+Responsive(x)
+  &:nth-child({x}n)
+    float: right
+    margin-right: 0
+  &:nth-child({x}n+1)
+    margin-left: 0
+    clear: both
+waffle()
+  &:nth-child(3n)
+    float: right
+    margin-right: 0
+  &:nth-child(3n+1)
+    margin-left: 0
+  for i in range(1,3)
+    &:nth-child({i})
+      margin-top: 0
+  for i in range(13,15)
+    &:nth-child({i})
+      margin-bottom: 0
+
 /* common style */
-$width = 1140
+$width = unit(1140, px)
 
 header
   margin: 50px auto
@@ -165,98 +208,41 @@ section:nth-of-type(9)
         padding: 42px
 
 /* float */
-@media (min-width: 1100px)
-  .float
-    section:nth-of-type(1)
-      div
-        width: calc(99.99% * 1/4 - (30px - 30px * 1/4))
-      div:nth-child(5)
-        margin-left: 0
-      div:nth-child(4)
-        float: right
-        margin-right: 0
-    section:nth-of-type(5)
-      div
-        width: calc(99.99% * 1/4 - (30px - 30px * 1/4))
-      div:nth-child(4)
-        float: right
-        margin-right: 0
-      div:nth-child(5)
-        clear: left
-        margin-left: 0
-@media (min-width: 800px) and (max-width: 1100px)
-  .float
-    section:nth-of-type(1) 
-      div
-        width: calc(99.99% * 1/3 - (30px - 30px * 1/3))
-      div:nth-child(4)
-        margin-left: 0
-      div:nth-child(3), div:nth-child(6)
-        float: right
-        margin-right: 0
-    section:nth-of-type(5)
-      div
-        width: calc(99.99% * 1/3 - (30px - 30px * 1/3))
-      div:nth-child(3)
-        float: right
-        margin-right: 0
-      div:nth-child(4)
-        clear: left
-        margin-left: 0
-@media (min-width: 500px) and (max-width: 800px)
-  .float
-    section:nth-of-type(1) 
-      div
-        width: calc(99.99% * 1/2 - (30px - 30px * 1/2))
-      div:nth-child(3), div:nth-child(5)
-        margin-left: 0
-      div:nth-child(2), div:nth-child(4), div:nth-child(6)
-        float: right
-        margin-right: 0
-    section:nth-of-type(5)
-      div
-        width: calc(99.99% * 1/2 - (30px - 30px * 1/2))
-      div:nth-child(2), div:nth-child(4)
-        float: right
-        margin-right: 0
-      div:nth-child(3), div:nth-child(5)
-        clear: left
-        margin-left: 0
-@media (max-width: 500px)
-  .float
-    section:nth-of-type(1), section:nth-of-type(5)
-      div
-        width: calc(99.99% * 1/1 - (30px - 30px * 1/1))
-        clear: both
-        margin-left: 0!important
 .float
   section
     zoom: 1
     overflow: hidden
     div
-      margin: 15px 15px
+      setMargin(false, 15px)
       height: 100px
-    div:first-child
-      margin-left: 0
-    div:last-child
-      margin-right: 0
+      setEnds(false, setMargin, left, right)
   section:nth-of-type(1)
     div
       background-color: #22c1fd
   section:nth-of-type(1), section:nth-of-type(5)
     padding: 0
     div
-      float: left     
+      float: left 
+      @media isAboveDesktop
+        setWidth(1 / 4)
+        Responsive(4)
+      @media isDesktop  
+        setWidth(1 / 3)
+        Responsive(3)
+      @media isTablet
+        setWidth(1 / 2)
+        Responsive(2)
+      @media isMobile
+        setWidth(1 / 1)
+        clear: both
+        margin-left: 0
   section:nth-of-type(2)
     div
-      width: calc(99.99% * 1/3 - (30px - 30px * 1/3))
-    div:first-child
-      float: left
-    div:last-child
-      float: right
+      setWidth(1 / 3)
+      setEnds(true, false, arg1, arg2)
   section:nth-of-type(3)
     div
-      width: calc(99.99% * 1/3 - (30px - 30px * 1/3))
+      setWidth(1 / 3)
       float: left
       background-color: #7ba48d
       zoom: 1
@@ -268,13 +254,10 @@ section:nth-of-type(9)
       div
         margin: 0
         width: 33.33%
-      div:first-child
-        float: left
-      div:last-child
-        float: right
+        setEnds(true, false, arg1, arg2)
   section:nth-of-type(4)
     div
-      width: calc(99.99% * 1/3 - (30px - 30px * 1/3))
+      setWidth(1 / 3)
       margin: auto
   section:nth-of-type(5)
     div
@@ -289,44 +272,22 @@ section:nth-of-type(9)
     div
       clear:both
       margin: 30px 0
-    div:first-child
-      margin-top: 0
-    div:last-child
-      margin-bottom: 0
+      setEnds(true, setMargin, top, bottom)
   section:nth-of-type(7)
     div
-      width: calc(99.99% * 1/3 - (30px - 30px * 1/3))
+      setWidth(1 / 3)
       float: left
       background-color: #ff4726
-    div:nth-child(3), div:nth-child(6), div:nth-child(9), div:nth-child(12)
-      float: right
-      margin-right: 0
-    div:nth-child(4), div:nth-child(7), div:nth-child(10), div:nth-child(13)
-      margin-left: 0
-    div:nth-child(1), div:nth-child(2), div:nth-child(3)
-      margin-top: 0
-    div:nth-child(13), div:nth-child(14), div:nth-child(15)
-      margin-bottom: 0
+      waffle()
   section:nth-of-type(8)
     div
       background-color: #00e672
-    div:first-child
-      float: left
-      width: calc(99.99% * 1/3 - (30px - 30px * 1/3))
-    div:last-child
-      float: right
-      width: calc(99.99% * 2/3 - (30px - 30px * 2/3))
+      setEnds(true, setWidth, 1/3, 2/3)
   section:nth-of-type(9)
     div
       background-color: #568e90
-    div:first-child
-      float: right
-      margin-right: 0
-      width: calc(99.99% * 1/2 - (30px - 30px * 1/2))
-    div:last-child
-      float: left
-      margin-left: 0
-      width: calc(99.99% * 1/2 - (30px - 30px * 1/2))
+      setWidth(1 / 2)
+      setEnds(true, setMargin, left, right)
       
     
       
