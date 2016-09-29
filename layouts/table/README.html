@@ -1,0 +1,24 @@
+<h1>table布局总结</h1>
+<h3>优点：</h3>
+<ul>
+<li>垂直居中</li>
+<li>等高</li>
+<li>等分布局</li>
+</ul>
+<h3>缺点：</h3>
+<ul>
+<li>width, margin等属性不能影响设置了table-cell的元素</li>
+<li>设置了table-cell的元素自适应父级元素，使响应式的实现不能单纯依赖于CSS，而要借助JS实现</li>
+<li>设置border-spacing属性会使元素四周都出现间距，使第一个元素左端和最后一个元素右端出现间距，打破原来的布局</li>
+</ul>
+<h3>应用场景</h3>
+<ul>
+<li>需要以表格呈现的内容</li>
+<li>图片、文字区块展示</li>
+<li>及其他需要等高等分布局的地方</li>
+</ul>
+<h3>属性说明</h3>
+<ul>
+<li>table: 使元素以表格方式呈现</li>
+<li>table-cell: 使元素以单元格方式呈现，不能应用width, margin等属性</li>
+</ul>
