@@ -600,12 +600,6 @@ section:nth-of-type(9) {
 .float section:nth-of-type(6) div:last-child {
   margin-bottom: 0;
 }
-.float section:nth-of-type(6) div:first-child {
-  float: left;
-}
-.float section:nth-of-type(6) div:last-child {
-  float: right;
-}
 .float section:nth-of-type(7) div {
   width: calc(99.99% * 0.333333333333333 - (30px - 30px * 0.333333333333333));
   float: left;
