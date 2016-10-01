@@ -489,7 +489,7 @@ section:nth-of-type(9) {
 .float section:nth-of-type(5) div {
   float: left;
 }
-@media (min-width: 1100px) {
+@media only screen and (min-width: 1025px) {
   .float section:nth-of-type(1) div,
   .float section:nth-of-type(5) div {
     width: calc(99.99% * 0.25 - (30px - 30px * 0.25));
@@ -505,7 +505,7 @@ section:nth-of-type(9) {
     clear: both;
   }
 }
-@media (min-width: 800px) and (max-width: 1100px) {
+@media (min-width: 769px) and (max-width: 1024px) {
   .float section:nth-of-type(1) div,
   .float section:nth-of-type(5) div {
     width: calc(99.99% * 0.333333333333333 - (30px - 30px * 0.333333333333333));
@@ -521,7 +521,7 @@ section:nth-of-type(9) {
     clear: both;
   }
 }
-@media (min-width: 500px) and (max-width: 800px) {
+@media (min-width: 421px) and (max-width: 768px) {
   .float section:nth-of-type(1) div,
   .float section:nth-of-type(5) div {
     width: calc(99.99% * 0.5 - (30px - 30px * 0.5));
@@ -537,7 +537,7 @@ section:nth-of-type(9) {
     clear: both;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 420px) {
   .float section:nth-of-type(1) div,
   .float section:nth-of-type(5) div {
     width: calc(99.99% * 1 - (30px - 30px * 1));
