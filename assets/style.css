@@ -271,6 +271,7 @@ header h1 {
   width: 90%;
   margin: auto;
   text-align: center;
+  clear: both;
 }
 .float-advanced div {
   float: left;
@@ -312,6 +313,7 @@ header h1 {
     margin-bottom: 15px;
   }
   .float-advanced div:nth-child(5) {
+    clear: left;
     margin-top: 15px;
     margin-right: 1.7%;
     width: calc(65.4%);
