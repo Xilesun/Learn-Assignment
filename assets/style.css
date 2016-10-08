@@ -265,81 +265,109 @@ header {
 header h1 {
   font-size: 30px;
 }
-.float-advanced {
+section {
+  overflow: hidden;
+  zoom: 1;
   max-width: 1140px;
   width: 90%;
-  margin: auto;
+  margin: 50px auto;
   text-align: center;
   clear: both;
 }
-.float-advanced div {
+section div {
   float: left;
   border: 1px dotted #000;
   padding: 20px;
   margin: 15px 0;
 }
-.float-advanced div:nth-child(1) {
+section div:nth-child(1) {
   padding: 0;
 }
-.float-advanced div:nth-child(1),
-.float-advanced div:nth-child(4) {
+section div:nth-child(1),
+section div:nth-child(4),
+section div:nth-child(6) {
   float: right;
 }
-.float-advanced div:nth-child(5) {
+section div:nth-child(5) {
   border: none;
   padding: 0;
   margin: 0;
 }
-.float-advanced div:nth-child(5)>div {
+section div:nth-child(5)>div {
   float: left;
   padding: 20px;
 }
 @media only screen and (min-width: 769px) {
-  .float-advanced div {
+  section div {
     width: 31%;
   }
-  .float-advanced div:nth-child(3),
-  .float-advanced div:nth-child(6) {
-    margin-left: 3.4%;
-  }
-  .float-advanced div:nth-child(5) {
+  section div:nth-child(5) {
     clear: left;
     width: calc(65.4%);
   }
-  .float-advanced div:nth-child(5)>div {
+  section div:nth-child(5)>div {
     width: calc(47.5%);
   }
-  .float-advanced div:nth-child(5)>div:first-child {
+  section div:nth-child(5)>div:first-child {
     margin-right: 5%;
   }
-  .float-advanced div:nth-child(5)>div:last-child {
+  section div:nth-child(5)>div:last-child {
     margin-right: 0;
   }
 }
 @media (min-width: 421px) and (max-width: 768px) {
-  .float-advanced div {
+  section div {
     width: 47%;
   }
-  .float-advanced div:nth-child(3),
-  .float-advanced div:nth-child(6) {
+  section div:nth-child(6) {
     float: right;
   }
-  .float-advanced div:nth-child(4) {
+  section div:nth-child(4) {
     clear: both;
   }
-  .float-advanced div:nth-child(5) {
+  section div:nth-child(5) {
     margin-right: 6%;
   }
-  .float-advanced div:nth-child(5)>div {
+  section div:nth-child(5)>div {
     width: 100%;
   }
 }
 @media (max-width: 420px) {
-  .float-advanced div {
+  section div {
     width: 100%;
   }
-  .float-advanced div>div {
+  section div>div {
     clear: both;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .float-advanced >div:nth-child(3) {
+    margin-left: 3.4%;
+  }
+}
+@media (min-width: 421px) and (max-width: 768px) {
+  .float-advanced >div:nth-child(6),
+  .float-advanced >div:nth-child(3) {
+    float: right;
+  }
+}
+@media only screen and (min-width: 769px) {
+  .float_2 >div:nth-child(2) {
+    -webkit-transform: translateX(111%);
+    transform: translateX(111%);
+  }
+  .float_2 >div:nth-child(3) {
+    -webkit-transform: translateX(-99.8%);
+    transform: translateX(-99.8%);
+  }
+}
+@media (min-width: 421px) and (max-width: 768px) {
+  .float_2 >div:nth-child(2) {
+    float: right;
+    clear: both;
+  }
+  .float_2 >div:nth-child(3) {
+    margin-top: -33px;
   }
 }
 /*# sourceMappingURL=src/styles/stylus/float-advanced.css.map */
