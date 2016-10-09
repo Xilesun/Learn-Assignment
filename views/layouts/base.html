@@ -4,11 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1">
   <title>{{post.title}}</title>
-  <base href="/Learn-Assignment/">
-  {{ site_head() }}
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/{% block style %}{% endblock %}.css">
 </head>
 <body class="{% block body_class %}{% endblock %}">
     {% block main %}{% endblock %}
-  {{ site_footer() }}
+<script type="text/javascript" src="assets/jquery.min.js"></script>
+<script type="text/javascript" src="assets/{% block js %}{% endblock %}.js"></script>
 </body>
 </html>

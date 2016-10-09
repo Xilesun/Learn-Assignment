@@ -18,6 +18,8 @@ module.exports = {
   context: paths.root,
   entry: {
     style: 'styles', // alias, realpath is ./src/styles/index.js
+    demo: 'styles/stylus/demo.styl',
+    float: 'styles/stylus/float.styl',
     main: 'scripts', // alias, realpath is ./src/scripts/index.js
   },
   output: {

@@ -3,6 +3,6 @@ import $ from 'jquery'
 import { display } from './demo'
 
 $(document).ready(function($) {	
-  display();
-  $(window).on('resize', display);
+	display();
+	$(window).resize(display);
 });

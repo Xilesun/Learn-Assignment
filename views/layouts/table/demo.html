@@ -1,4 +1,6 @@
 {% extends 'layouts/base.html' %}
+{% block style %}demo{% endblock %}
+{% block body_class %}table{% endblock %}
 
 {% block main %}
 <header><h1>{{ post.head }}</h1></header>
@@ -93,3 +95,4 @@
 </div>
 </section>
 {% endblock %}
+{% block js %}main{% endblock %}
