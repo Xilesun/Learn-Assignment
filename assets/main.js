@@ -40,9 +40,8 @@
 /******/ 	return __webpack_require__(0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53,7 +52,7 @@
 	
 	var _jquery2 = _interopRequireDefault(_jquery);
 	
-	var _demo = __webpack_require__(18);
+	var _demo = __webpack_require__(2);
 	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
@@ -63,22 +62,13 @@
 	});
 
 /***/ },
-
-/***/ 1:
+/* 1 */
 /***/ function(module, exports) {
 
 	module.exports = jQuery;
 
 /***/ },
-
-/***/ 8:
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "jquery.min.js";
-
-/***/ },
-
-/***/ 18:
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
@@ -130,7 +120,17 @@
 	}
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
 
-/***/ }
+/***/ },
+/* 3 */,
+/* 4 */,
+/* 5 */,
+/* 6 */,
+/* 7 */,
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
 
-/******/ });
+	module.exports = __webpack_require__.p + "jquery.min.js";
+
+/***/ }
+/******/ ]);
 //# sourceMappingURL=main.js.map
