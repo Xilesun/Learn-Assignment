@@ -4,7 +4,7 @@ mq-tablet-landscape = '(min-width: 769px) and (max-width: 1024px)'
 mq-tablet-portrait = '(min-width: 421px) and (max-width: 768px)'
 mq-mobile = '(max-width: 420px)'
 setWidth(col, gutter = unit(30, px))
-  width "calc(99.99% * %s - (%s - %s * %s))" % (col gutter gutter col)
+  width "calc(99.9% * %s - (%s - %s * %s))" % (col gutter gutter col)
 setMargin(side, m=0)
   if side != false
     margin-{side}: m
@@ -340,7 +340,7 @@ section:nth-of-type(9)
       &>div
         setWidth(1 / 3)
         &:first-child
-          margin-right: calc(99.99% * 1 / 3 + 25px)
+          margin-right: calc(99.9% * 1 / 3 + 25px)
     &:nth-of-type(3)
       &>div
         background-color: #7ba48d
