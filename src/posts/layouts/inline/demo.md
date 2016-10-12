@@ -1,7 +1,7 @@
 ---
 layout: layouts/inline/demo.html
-title: Float Layout Demo
-head: Float Layout Demo
+title: Inline-block Layout Demo
+head: Inline-block Layout Demo
 text1: 1 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem rem nam dolore repellendus provident, voluptas necessitatibus vel cupiditate delectus, doloremque incidunt accusantium quia! Nisi molestiae totam natus, in assumenda accusantium.
 text2: 2 - Lorem ipsum dolor sit amet.
 text3: 3 - Lorem ipsum dolor sit amet, consectetur adipisicing elit. At sunt harum ut rerum id quae voluptas velit iusto quasi distinctio.
