@@ -1,24 +1,22 @@
-<h1>float布局总结</h1>
+<h1>Inline-block布局总结</h1>
 <h3>优点：</h3>
 <ul>
-<li>使块级元素成行排列</li>
-<li>响应式易于实现</li>
-<li>有多个解决现存bugs的方法</li>
+<li>水平、垂直居中</li>
+<li>同时具有行内样式和块级元素的属性</li>
 </ul>
 <h3>缺点：</h3>
 <ul>
-<li>脱离文档流，破坏原来布局，难以控制定位</li>
-<li>父级元素不能自适应高度，可以用overflow属性解决</li>
-<li>需要清除浮动，实现响应式过程中，需要多次对元素清除浮动</li>
+<li>作为行内元素存在letter-spacing。标准解决方案是父级元素使用font-size: 0。</li>
 </ul>
 <h3>应用场景</h3>
 <ul>
-<li>瀑布流布局</li>
-<li>横排列表</li>
-<li>流式布局</li>
+<li>需要使块级元素并列显示</li>
+<li>需要对行内元素应用margin等属性</li>
 </ul>
 <h3>属性说明</h3>
 <ul>
-<li>float：left/right 实现一个元素向左或者向右浮动</li>
-<li>clear：left/right/both 用于清除元素浮动</li>
+<li>display: inline-block 使块级元素以行内样式渲染</li>
+<li>font-size: 0 用于清除letter-spacing</li>
+<li>vertical-align: top/center/bottom 对元素进行垂直定位</li>
+<li>text-align: left/center/right 对元素进行水平定位</li>
 </ul>
