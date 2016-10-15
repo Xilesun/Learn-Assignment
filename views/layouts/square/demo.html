@@ -1,0 +1,11 @@
+{% extends 'layouts/base.html' %}
+{% block style %}square{% endblock %}
+{% block body_class %}{% endblock %}
+
+{% block main %}
+<section>
+{% for i in range(1, 14) -%}
+<div>{{ i }}</div>
+{%- endfor %}
+</section>
+{% endblock %}
