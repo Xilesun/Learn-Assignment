@@ -1,0 +1,36 @@
+/* variables and functions */
+section {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+section div {
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  border: 1px dotted #000;
+  margin: 5px;
+  text-align: center;
+  padding: 148px 0;
+}
+@media only screen and (min-width: 1400px) {
+  section div:nth-child(13) {
+    -webkit-transform: translateX(-465px);
+    transform: translateX(-465px);
+  }
+}
+@media (min-width: 1100px) and (max-width: 1399px) {
+  section div:nth-child(13) {
+    -webkit-transform: translateX(-310px);
+    transform: translateX(-310px);
+  }
+}
+@media (min-width: 700px) and (max-width: 1099px) {
+  section div:nth-child(13) {
+    -webkit-transform: translateX(-155px);
+    transform: translateX(-155px);
+  }
+}
+/*# sourceMappingURL=src/styles/stylus/square.css.map */
+/*# sourceMappingURL=square.css.map*/
