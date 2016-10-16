@@ -3,24 +3,11 @@ mq-desktop = 'only screen and (min-width: 1378px)'
 mq-tablet-landscape = '(min-width: 1034px) and (max-width: 1377px)'
 mq-tablet-portrait = '(min-width: 689px) and (max-width: 1033px)'
 
-x = 13//x为格子个数
-remain(width) 
-  return x % (floor(width/300))
-desktop-remain = remain(1200)
-tablet-landscape-remain = remain(900)
-tablet-portrait-remain = remain(600)
-getRange(dev)
-  s = x - dev + 1
-  e = x
-  return range(s, e)
-offset(w)
-  transform: translateX(-155px * (floor(w/300) - remain(w)))
-
 section
   max-width: 1280px
   width: 90%
   margin: auto
-  text-align: center
+  text-align: left
   div
     display: inline-block
     width: 300px
@@ -29,17 +16,5 @@ section
     margin: 5px
     text-align: center
     padding: 148px 0
-    @media mq-desktop
-      for i in getRange(desktop-remain)
-        &:nth-child({i})
-          offset(1200)
-    @media mq-tablet-landscape
-      for i in getRange(tablet-landscape-remain)
-        &:nth-child({i})
-          offset(900)
-    @media mq-tablet-portrait
-      for i in getRange(tablet-portrait-remain)
-        &:nth-child({i})
-          offset(600)
       
       

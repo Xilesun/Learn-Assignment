@@ -20,8 +20,9 @@ module.exports = {
     style: 'styles', // alias, realpath is ./src/styles/index.js
     demo: 'styles/stylus/demo.styl',
     float: 'styles/stylus/float.styl',
-    square: 'styles/stylus/square.styl',
+    squarecss: 'styles/stylus/square.styl',
     main: 'scripts', // alias, realpath is ./src/scripts/index.js
+    squarejs: 'scripts/square.js'
   },
   output: {
     path: 'build/assets',
