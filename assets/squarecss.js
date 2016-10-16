@@ -42,39 +42,10 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/* WEBPACK VAR INJECTION */(function($) {"use strict";
-	
-	function display() {
-	  var square = $("section>div"),
-	      n = square.length,
-	      view = $("section").width(),
-	      w = square.width(),
-	      remain = n % Math.floor(view / w),
-	      s = n - remain;
-	
-	  if (view > 689) {
-	    for (var i = s; i < n; i++) {
-	      $("section>div:eq(" + i + ")").css("transform", "translateX(-310px)");
-	    }
-	  } else {
-	    for (var i = s; i < n; i++) {
-	      $("section>div:eq(" + i + ")").css("transform", "translateX(0px)");
-	    }
-	  }
-	}
-	
-	display();
-	$(window).resize(display);
-	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(1)))
-
-/***/ },
-/* 1 */
 /***/ function(module, exports) {
 
-	module.exports = jQuery;
+	// removed by extract-text-webpack-plugin
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=square.js.map
+//# sourceMappingURL=squarecss.js.map

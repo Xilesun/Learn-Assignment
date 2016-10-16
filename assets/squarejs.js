@@ -47,22 +47,18 @@
 	/* WEBPACK VAR INJECTION */(function($) {"use strict";
 	
 	function display() {
-	  var square = $("section>div"),
-	      n = square.length,
-	      view = $("section").width(),
-	      w = square.width(),
-	      remain = n % Math.floor(view / w),
-	      s = n - remain;
+	    var square = $("section>div"),
+	        view = window.innerWidth * 0.9,
+	        //获取容器大小
+	    w = parseInt(square.css("width").replace("px", "")),
+	        //获取方块大小
+	    gutter = 10,
+	        //设置间距
+	    col = Math.floor(view / (w + gutter)),
+	        //获取列数
+	    width = col * w + gutter * (col - 1) + gutter; //计算section宽度
 	
-	  if (view > 689) {
-	    for (var i = s; i < n; i++) {
-	      $("section>div:eq(" + i + ")").css("transform", "translateX(-310px)");
-	    }
-	  } else {
-	    for (var i = s; i < n; i++) {
-	      $("section>div:eq(" + i + ")").css("transform", "translateX(0px)");
-	    }
-	  }
+	    $("section").css("width", width);
 	}
 	
 	display();
@@ -77,4 +73,4 @@
 
 /***/ }
 /******/ ]);
-//# sourceMappingURL=square.js.map
+//# sourceMappingURL=squarejs.js.map

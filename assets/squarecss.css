@@ -3,7 +3,7 @@ section {
   max-width: 1280px;
   width: 90%;
   margin: auto;
-  text-align: center;
+  text-align: left;
 }
 section div {
   display: inline-block;
@@ -15,4 +15,4 @@ section div {
   padding: 148px 0;
 }
 /*# sourceMappingURL=src/styles/stylus/square.css.map */
-/*# sourceMappingURL=square.css.map*/
+/*# sourceMappingURL=squarecss.css.map*/
