@@ -4,6 +4,7 @@ section {
   width: 90%;
   margin: auto;
   text-align: left;
+  font-size: 0;
 }
 section div {
   display: inline-block;
@@ -13,6 +14,7 @@ section div {
   margin: 5px;
   text-align: center;
   padding: 148px 0;
+  font-size: 14px;
 }
 /*# sourceMappingURL=src/styles/stylus/square.css.map */
 /*# sourceMappingURL=squarecss.css.map*/
