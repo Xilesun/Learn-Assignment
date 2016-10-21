@@ -1,0 +1,36 @@
+/* variables and functions */
+section {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  display: table;
+  border-spacing: 10px;
+}
+section div {
+  display: table-row;
+}
+section div div {
+  display: table-cell;
+  border: 1px dotted #000;
+  text-align: center;
+  height: auto;
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+  section div div {
+    width: 33.33%;
+  }
+}
+@media (min-width: 361px) and (max-width: 767px) {
+  section div div {
+    width: 50%;
+  }
+}
+@media (max-width: 360px) {
+  section div div {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=src/styles/stylus/square2.css.map */
+/*# sourceMappingURL=square2css.css.map*/
