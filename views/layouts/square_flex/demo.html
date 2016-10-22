@@ -1,0 +1,12 @@
+{% extends 'layouts/base.html' %}
+{% block style %}square_flex{% endblock %}
+{% block body_class %}{% endblock %}
+
+{% block main %}
+<section>
+{% for i in range(1, 14) -%}
+<div>{{ i }}</div>
+{%- endfor %}
+</section>
+{% endblock %}
+{% block js %}{% endblock %}
