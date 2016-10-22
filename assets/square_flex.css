@@ -1,0 +1,40 @@
+/* variables and functions */
+section {
+  max-width: 1280px;
+  width: 90%;
+  margin: auto;
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+section div {
+  border: 1px dotted #000;
+  text-align: center;
+  height: auto;
+  margin: 5px;
+  padding: 20px;
+}
+@media only screen and (min-width: 768px) {
+  section div {
+    width: calc(33.33% - 10px);
+  }
+}
+@media (min-width: 361px) and (max-width: 767px) {
+  section div {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 360px) {
+  section div {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=src/styles/stylus/square_flex.css.map */
+/*# sourceMappingURL=square_flex.css.map*/
