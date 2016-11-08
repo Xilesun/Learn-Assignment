@@ -23,9 +23,11 @@ module.exports = {
     squarecss: 'styles/stylus/square.styl',
     square2css: 'styles/stylus/square2.styl',
     square_flex: 'styles/stylus/square_flex.styl',
+    classtablecss: 'styles/stylus/classtable.styl',
     main: 'scripts', // alias, realpath is ./src/scripts/index.js
     squarejs: 'scripts/square.js',
     square2js: 'scripts/square2.js',
+    classtablejs: 'scripts/classtable.js',
   },
   output: {
     path: 'build/assets',
