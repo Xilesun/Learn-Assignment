@@ -1,0 +1,50 @@
+.contanter {
+  width: 800px;
+  margin: auto;
+}
+.table {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+}
+.table>div {
+  text-align: center;
+  width: 20%;
+}
+.table>div>div {
+  height: 100px;
+  padding: 20px 20px;
+  border: 1px solid #eee;
+  line-height: 18px;
+}
+.table>div>div span:nth-of-type(3) {
+  font-size: 13px;
+}
+.table>div>div:nth-of-type(1) {
+  background-color: #aaa;
+  height: 75px;
+}
+.row {
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+.row>div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  width: 100%;
+}
+.row>div>div {
+  width: 20%;
+}
+.row>div>div:nth-of-type(1) {
+  padding: 40px;
+  height: 100px;
+}
+/*# sourceMappingURL=src/styles/stylus/classtable.css.map */
+/*# sourceMappingURL=classtablecss.css.map*/
